@@ -17,6 +17,11 @@
       <div  ng-repeat="item in beats">
         <ul>
           <li>{{item.name}}<a class="btn" ui-sref="beats({beatId: item.id})">Add Reporter To Beat</a></li>
+          <div ng-repeat="reporter in item.reporters">
+            <ul>
+              <li>{{reporter.name}}</li>
+            </ul>
+          </div>
         </ul>
 
       </div>
