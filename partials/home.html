@@ -11,4 +11,17 @@
     <button type="submit">Add Beat</button>
 
     </form>
+
+    <div ng-show="beats.length">
+      <h3>Beats</h3>
+      <div  ng-repeat="item in beats">
+        <ul>
+          <li>{{item.name}}</li>
+        </ul>
+
+      </div>
+
+    </div>
   </div>
+
+<div ui-view></div>

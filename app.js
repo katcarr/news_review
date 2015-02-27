@@ -8,9 +8,9 @@ newspaper.config(function($stateProvider){
     controller: "BeatsCtrl"
   });
 
-  $stateProvider.state('beats', {
+  $stateProvider.state('home.beats', {
     url: "/beats.html",
-    templateUrl: "partials/beats.html",
+    templateUrl: "partials/home.beats.html",
     controller: "BeatsCtrl"
   });
 });
