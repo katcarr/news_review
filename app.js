@@ -8,16 +8,11 @@ newspaper.config(function($stateProvider){
     controller: "BeatsCtrl"
   });
 
-  $stateProvider.state('beats', {
-    url: "/beats/:beatId",
-    templateUrl: "partials/beats.html",
+  $stateProvider.state('reporterform', {
+    url: "/reporterform/:beatId",
+    templateUrl: "partials/reporterform.html",
     controller: "ReportersCtrl"
   });
 
-  // $stateProvider.state('beats.reporters', {
-  //   url:"",
-  //   templateUrl: "partials/beats.reporters.html",
-  //   controller: "ReportersCtrl"
-  // });
 
 });

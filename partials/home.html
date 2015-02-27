@@ -7,7 +7,7 @@
 
     <div class="form-group">
       <label>Beat Name</label>
-      <input class="form-control" ng-model="BeatsFactory.beatName">
+      <input class="form-control" ng-model="BeatsFactory.beatName" required autofocus>
     </div>
 
     <button type="submit">Add Beat</button>
@@ -26,17 +26,21 @@
       <h3>Beats</h3>
       <div  ng-repeat="item in beats | filter:query">
         <ul>
-          <li>{{item.name}}<a class="btn" ui-sref="beats({beatId: item.id})">Add Reporter To Beat</a></li>
-          <div ng-repeat="reporter in item.reporters">
-            <ul>
-              <li>{{reporter.name}}<button class="btn btn-xs"ng-click="show = !show">Emplyoee Info</button></li>
-                <div ng-show="show">
-                  <ul>
-                    <li>Years of Employment: <span ng-bind=reporter.employmentYears></span></li>
-                    <li>Birthdate: <span ng-bind=reporter.birthdate></span></li>
-                  </ul>
-                </div>
-            </ul>
+          <li>{{item.name}}<a class="btn" ui-sref="reporterform({beatId: item.id})">Add Reporter To Beat</a></li>
+          <div ng-show="item.reporters">
+            <div ng-repeat="reporter in item.reporters">
+              <ul>
+                <li><b>Reporters for {{item.name}}</b></li>
+                <li>{{reporter.name}}<button class="btn btn-xs"ng-click="show = !show">Emplyoee Info</button></li>
+                  <div ng-show="show">
+                    <ul>
+                      <li>Namet: <span ng-bind=reporter.name></span></li>
+                      <li>Years of Employment: <span ng-bind=reporter.employmentYears></span></li>
+                      <li>Birthdate: <span ng-bind=reporter.birthdate></span></li>
+                    </ul>
+                  </div>
+              </ul>
+            </div>
           </div>
         </ul>
 
