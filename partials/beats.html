@@ -1,3 +1,22 @@
 <h2>Add a Reporter to <span ng-bind="beat.name"><span></h2>
 
-  
+  <form ng-submit="BeatsFactory.addReporter()" role="form">
+
+  <div class="form-group">
+    <label>Reporter Name</label>
+    <input class="form-control" ng-model="BeatsFactory.reporterName" required type="text">
+  </div>
+
+  <div class="form-group">
+    <label>Years Of Employment</label>
+    <input class="form-control" ng-model="BeatsFactory.employmentYears" required type="number" min="0">
+  </div>
+
+  <div class="form-group">
+    <label>Birthdate</label>
+    <input class="form-control" ng-model="BeatsFactory.birthdate">
+  </div>
+
+  <button type="submit">Add Reporter</button>
+
+  </form>
