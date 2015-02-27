@@ -29,7 +29,13 @@
           <li>{{item.name}}<a class="btn" ui-sref="beats({beatId: item.id})">Add Reporter To Beat</a></li>
           <div ng-repeat="reporter in item.reporters">
             <ul>
-              <li>{{reporter.name}}</li>
+              <li>{{reporter.name}}<button class="btn btn-xs"ng-click="show = !show">Emplyoee Info</button></li>
+                <div ng-show="show">
+                  <ul>
+                    <li>Years of Employment: <span ng-bind=reporter.employmentYears></span></li>
+                    <li>Birthdate: <span ng-bind=reporter.birthdate></span></li>
+                  </ul>
+                </div>
             </ul>
           </div>
         </ul>
