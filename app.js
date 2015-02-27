@@ -8,9 +8,16 @@ newspaper.config(function($stateProvider){
     controller: "BeatsCtrl"
   });
 
-  $stateProvider.state('home.beats', {
-    url: "/beats.html",
-    templateUrl: "partials/home.beats.html",
-    controller: "BeatsCtrl"
+  $stateProvider.state('beats', {
+    url: "/beats/:beatId",
+    templateUrl: "partials/beats.html",
+    controller: "ReportersCtrl"
   });
+
+  // $stateProvider.state('beats.reporters', {
+  //   url:"",
+  //   templateUrl: "partials/beats.reporters.html",
+  //   controller: "ReportersCtrl"
+  // });
+
 });

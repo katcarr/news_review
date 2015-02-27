@@ -16,12 +16,11 @@
       <h3>Beats</h3>
       <div  ng-repeat="item in beats">
         <ul>
-          <li>{{item.name}}</li>
+          <li>{{item.name}}<a class="btn" ui-sref="beats({beatId: item.id})">Add Reporter To Beat</a></li>
         </ul>
 
       </div>
 
     </div>
   </div>
-
 <div ui-view></div>
